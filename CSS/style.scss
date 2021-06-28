@@ -1,0 +1,1577 @@
+/* animation chargement de la page */
+/*Variable qui me permet de gérer la durée de l'animation */
+$anim-dur: 3500ms;
+$num-circles: 5;
+$anim-delay:$anim-dur/$num-circles;
+
+/* Arrière plan de l'animation */
+.background-loading {
+    width: 100%;
+    height: 2em;
+    background: #a7a6a6;
+    animation: background-loading 3500ms;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+}
+
+/* Gère la taille de l'îcone dans le loader */
+.loading .fas {
+    margin-top: 0.5em;
+    margin-left: 25%;
+    font-size: 2em;
+    animation: fasrotate 2000ms
+}
+
+/* Gère l'effet de rotation dans mon loader */
+@keyframes fasrotate {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(2160deg)
+    }
+}
+
+.loading {
+    width: 9em;
+    height: 9em;
+    margin-top: 0%;
+    margin-left: 0%;
+    animation: loading 3000ms;
+    opacity: 0;
+    position: absolute;
+    z-index: 3;
+
+    &__circle--1 {
+        width: 9em;
+        height: 9em;
+        background: #9356DC;
+        opacity: 0.5;
+        border-radius: 50%;
+        position: absolute;
+        animation: circle $anim-dur backwards;
+    }
+
+    &__circle--2 {
+        width: 7.7em;
+        height: 7.7em;
+        background: #a7a6a6;
+        border-radius: 50%;
+        position: absolute;
+        margin-left: 10px;
+        margin-top: 10px;
+        animation: circle $anim-dur backwards;
+    }
+
+    &__circle--3 {
+        width: 6.5em;
+        height: 6.5em;
+        border-radius: 50%;
+        background: #99E2D0;
+        opacity: 0.5;
+        margin-top: 20px;
+        margin-left: 20px;
+        position: absolute;
+        animation: circle $anim-dur backwards;
+    }
+
+    &__circle--4 {
+        width: 5.2em;
+        height: 5.2em;
+        border-radius: 50%;
+        margin-top: 0em;
+        background: #a7a6a6;
+        position: absolute;
+        margin-left: 30px;
+        margin-top: 30px;
+        animation: circle $anim-dur backwards;
+    }
+
+    &__circle--5 {
+        width: 4em;
+        height: 4em;
+        background: #FF79DA;
+        opacity: 0.5;
+        border-radius: 50%;
+        margin-top: 40px;
+        margin-left: 40px;
+        position: absolute;
+        animation: circle $anim-dur backwards;
+    }
+}
+
+.loading__circle--0 {
+    animation-delay: 500ms;
+}
+
+.loading__circle--1 {
+    animation-delay: 400ms;
+}
+
+.loading__circle--2 {
+    animation-delay: 300ms;
+}
+
+.loading__circle--3 {
+    animation-delay: 200ms;
+}
+
+.loading__circle--4 {
+    animation-delay: 0ms;
+}
+
+@keyframes circle {
+    0% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1.0);
+        opacity: 1;
+    }
+}
+
+@keyframes loading {
+
+    /*gère le positionnement du loader et sa disparition à 100% */
+    0% {
+        transform: scale(1);
+        opacity: 1;
+        margin-top: 22%;
+        margin-left: 46%;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+        margin-top: 22%;
+        margin-left: 46%;
+    }
+
+    80% {
+        transform: scale(1);
+        opacity: 1;
+        margin-top: 22%;
+        margin-left: 46%;
+    }
+
+    95% {
+        transform: scale(1);
+        opacity: 1;
+        margin-top: 22%;
+        margin-left: 46%;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+        margin-top: 22%;
+        margin-left: 46%;
+    }
+}
+
+@keyframes background-loading {
+    0% {
+        transform: scaleY(65);
+        opacity: 0.9;
+    }
+
+    98% {
+        transform: scaleY(65);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+}
+
+
+@keyframes opacity_reverse {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes z-index {
+    from {
+        z-index: 0;
+    }
+
+    to {
+        z-index: 2;
+    }
+}
+
+@keyframes circle-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scale-x {
+    from {
+        transform: scaleX(0);
+
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes scale-y {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes translate-x {
+    from {
+        transform: translate(0%);
+    }
+
+    to {
+        transform: translate(-20%);
+    }
+}
+
+@keyframes width-reduce {
+    from {
+        width: 70%;
+    }
+
+    to {
+        width: 50%;
+    }
+}
+
+@keyframes scale-y {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+
+/* fin de l'animation de chargement */
+/* Page d'acceuil */
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 0px 12px 0px rgb(0 0 0 / 60%);
+
+    H1 {
+        color: black;
+        font-size: 3.5em;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        font-family: 'Shrikhand', cursive;
+    }
+}
+
+.location {
+    background-color: #e5e5e5b9;
+    width: 100%;
+    height: 3.5em;
+
+    .location_box {
+        height: 3.5em;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 7.5%;
+
+        input {
+            border: 0;
+            font-weight: bold;
+            background-color: transparent;
+            font-size: 1em;
+            font-family: 'Roboto', sans-serif;
+        }
+    }
+}
+
+
+.explore_restaurant {
+    background-color: #f2f2f294;
+    width: 100%;
+    text-align: center;
+
+    .container {
+        padding: 2% 0;
+        width: 100%;
+        font-family: 'Roboto', sans-serif;
+
+        h2 {
+            margin: 1%;
+            font-size: 25px;
+            font-weight: 900;
+            color: #000;
+        }
+    }
+}
+
+
+.btn-acceuil {
+    background: linear-gradient(to top, #9356DC, #FF79DA);
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 18px;
+    color: white;
+    border: violet;
+    box-shadow: 0px 0px 12px 0px rgb(0 0 0 / 40%);
+    width: 25%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.function_menu {
+    padding-left: 2em;
+    padding-right: 2em;
+    height: 10em;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: 800;
+    margin-bottom: 1.2em;
+    margin-top: 1.2em;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+}
+
+.explication {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Roboto', sans-serif;
+}
+
+.choose {
+    &:hover {
+        box-shadow: 0em 0.8em 0.4em #e6e5e5;
+        background-color: white;
+    }
+
+    height: auto;
+    border-radius: 1em;
+    margin: 0em 0em 1em 1em;
+    box-shadow: 0em 0.4em 0.4em #e6e5e5;
+    width: 20em;
+    background-color: #f6f6f6;
+}
+
+.first {
+    width: 1em;
+    height: 1em;
+    background: #9356DC;
+    border-radius: 0.7em;
+    padding: 0.3em 0.2em 0.2em 0.2em;
+    float: left;
+    margin-top: 1.7em;
+    margin-left: 0.8em;
+}
+
+.number {
+    margin: 0;
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    font-family: "Roboto Regular", arial;
+}
+
+.logo-explication {
+    i {
+        font-size: 1.3em;
+        width: 2em;
+        float: left;
+        color: #7e7e7e;
+        padding-top: 1.4em;
+        margin-left: 1em;
+    }
+}
+
+.text {
+    margin: 0;
+    padding-top: 1.8em;
+    padding-bottom: 2.2em;
+}
+
+#container-menu {
+    h6 {
+        font-size: 1.4em;
+        font-family: "Roboto", arial;
+        font-weight: 800;
+        margin-bottom: 1.2em;
+        margin-left: 1em;
+    }
+
+    width: 100%;
+    background: #F2F2F2;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.title-restaurant {
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: 800;
+    margin-bottom: 1.2em;
+    margin-top: 1.2em;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    margin-top: 0%;
+}
+
+.bloc_resto {
+    background: white;
+    width: 21%;
+    height: 14em;
+    border-radius: 1em;
+    margin: 0em 1em 1em 1em;
+    box-shadow: 0em 0.4em 0.4em #e6e5e5;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.img_resto {
+    position: relative;
+    width: 100%;
+    height: 68.5%;
+}
+
+.new {
+    position: relative;
+    background: #99E2D0;
+    width: 5.5em;
+    height: 1em;
+    font-weight: 600;
+    float: right;
+    padding: 0.6em 0.4em 0.8em 0.4em;
+    margin-top: 1.2em;
+    margin-right: 1em;
+    z-index: 1;
+    color: rgb(0, 135, 102);
+    font-family: "roboto regular", arial;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.image-cover-new {
+    margin-top: -2.9em;
+    object-fit: cover;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+.description {
+    width: auto;
+    height: 1.3em;
+
+    h5 {
+        width: 80%;
+        text-align: left;
+        font-family: "roboto Bold", arial;
+        font-weight: bolder;
+        color: black;
+        font-size: 1em;
+        float: left;
+        margin: 1em 0em 0em 1em;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .no-like {
+        position: relative;
+        margin-top: 1.5em;
+    }
+
+    .far {
+        float: right;
+        font-size: 1.6em;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        padding-right: 0.5em;
+    }
+
+    .like {
+        position: absolute;
+        margin: 3.5em 0.8em 0 0;
+    }
+
+    .fas {
+        float: right;
+        padding-top: 0.5em;
+        font-size: 0.8em;
+        position: relative;
+        z-index: 0;
+        color: white;
+        transition: transform 400ms ease-in-out;
+    }
+
+    &:hover {
+        .fas {
+            margin: 0;
+            transform: scale(2);
+            transform-origin: bottom;
+            background-clip: unset;
+            background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-transform: scale(2);
+        }
+
+        .far {
+            display: none;
+        }
+    }
+
+}
+
+.city {
+    width: auto;
+    text-align: left;
+    font-family: "roboto", arial;
+    font-size: 1em;
+    font-weight: lighter;
+    margin-top: 1em;
+    margin-left: 1em;
+    color: black;
+}
+
+.image-cover-old {
+    margin-top: 0;
+    object-fit: cover;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.restaurant-footer {
+    width: auto;
+    height: 10em;
+    margin-left: auto;
+    margin-right: auto;
+    background: #353535;
+    padding: 1.4em;
+    z-index: 2;
+    width: auto;
+    height: 9em;
+    margin-left: auto;
+    margin-right: auto;
+    background: #353535;
+    padding: 1.4em;
+    position: relative;
+}
+
+.title-footer {
+    font-size: 1.2em;
+    margin-top: 0em;
+    margin-bottom: 1em;
+    font-family: "shrikhand";
+    filter: invert(1);
+    font-size: 1.2em;
+    margin-top: 0em;
+    margin-bottom: 1em;
+    font-family: "shrikhand";
+    text-align: center;
+}
+
+.links-footer {
+    a {
+        font-family: "roboto regular", arial;
+        color: white;
+        margin-bottom: 0.5em;
+        text-decoration: none;
+        font-weight: lighter;
+        float: left;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.suggestion {
+    .fas {
+        font-size: 0.8em;
+        margin-right: 1em;
+        font-size: 0.8em;
+        margin-right: 1em;
+    }
+
+    height: 1.7em;
+}
+
+.partner {
+    .fas {
+        font-size: 0.7em;
+        margin-right: 1em;
+        font-size: 0.7em;
+        margin-right: 1em;
+    }
+
+    height: 1.7em;
+}
+
+.mention {
+    height: 1.7em;
+
+    .fas {
+        font-size: 0.8em;
+        margin-right: 1em;
+    }
+}
+
+.contact {
+    height: 1.7em;
+
+    .far {
+        font-size: 0.8em;
+        margin-right: 1em;
+    }
+}
+
+/* Fin de page d'acceuil */
+/*Page Restaurant*/
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+}
+
+.la-palette-du-gout_header {
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    background-color: #fff;
+    z-index: 3;
+    box-shadow: 0px 0px 12px 0px rgb(0 0 0 / 50%);
+    animation: z-index 0ms 3500ms linear backwards;
+
+    .header_container {
+        height: 100%;
+        width: 100%;
+        max-width: 845px;
+        margin: 0px auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        .previous {
+            position: absolute;
+            left: 2em;
+            font-size: 1.5em;
+            color: #000;
+
+            .active {
+                height: 100%;
+                display: block;
+            }
+        }
+    }
+}
+
+.restaurant_main {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    position: relative;
+    top: 80px;
+    animation: z-index 0ms 3500ms linear both;
+
+    .restaurant_picture {
+        height: 180px;
+        width: 100%;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: fixed;
+        }
+    }
+
+    .menu {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 800px;
+        margin: 0px auto;
+        padding: 15px 15px 0% 15px;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        position: relative;
+        background-color: #e5e5e5;
+        border-radius: 15px 15px 0px 0px;
+
+        .title {
+            height: 50px;
+            width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+
+            .title__text {
+                font-family: Shrikhand;
+                height: 100%;
+                width: 80%;
+                display: flex;
+                align-items: center;
+
+                .title-menu {
+                    margin: 1%;
+                    font-size: 25px;
+                    font-weight: 900;
+                    color: #000;
+                    text-transform: capitalize;
+                }
+            }
+
+            .logo-menu {
+                height: 100%;
+                width: 22.5%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .no-like-menu {
+                    position: absolute;
+                    margin: 0.5em 0 0 1em;
+
+                    .far {
+                        float: right;
+                        font-size: 1.6em;
+                        position: relative;
+                        z-index: 1;
+                        overflow: hidden;
+                        padding-right: 0.5em;
+                    }
+                }
+
+                .far {
+                    float: right;
+                    font-size: 1.6em;
+                    position: relative;
+                    z-index: 1;
+                    overflow: hidden;
+                    padding-right: 0.5em;
+                }
+
+                .like-menu {
+                    position: relative;
+                    margin-top: 1em;
+
+                    .fas {
+                        float: right;
+                        padding-top: 0.5em;
+                        font-size: 0.8em;
+                        position: relative;
+                        z-index: 0;
+                        color: #E5E5E5;
+                        transition: transform 400ms ease-in-out;
+                    }
+                }
+
+                &:hover {
+                    .fas {
+                        margin: 0;
+                        transform: scale(2);
+                        transform-origin: bottom;
+                        background-clip: unset;
+                        background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        -webkit-transform: scale(2);
+                    }
+
+                    .far {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .plat {
+            margin-top: 15px;
+
+            .plat__title {
+                display: flex;
+                flex-direction: column;
+
+                h4 {
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 18px;
+                    font-weight: lighter;
+                    color: #000;
+                    margin: 1%;
+                }
+
+                .underline {
+                    height: 3px;
+                    width: 6.5%;
+                    background-color: #99e2d0;
+                    margin: 0 0 0 0.5em;
+                }
+
+            }
+
+            .plat__container {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                .item {
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    .item {
+                        height: 80px;
+                        margin-top: 15px;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        background-color: #fff;
+                        border-radius: 15px;
+
+                        &:active {
+                            .fas {
+                                transform: translate(-2em, 0) rotate(180deg);
+                                transform: translate(-2em, 0) rotate(180deg);
+                            }
+                        }
+
+                        .item__name {
+                            width: 70%;
+                            padding: 0px 5%;
+
+                            .plat-menu {
+                                font-family: 'Roboto', sans-serif;
+                                text-align: left;
+                                font-size: 20px;
+                                font-weight: 600;
+                                color: #000;
+                                margin: 0;
+                            }
+
+                            h5 {
+                                margin: 0;
+                                font-weight: 400;
+                                font-size: 15px;
+                                font-family: 'Roboto', sans-serif;
+                            }
+                        }
+
+                        .item__price {
+                            width: 10%;
+                            padding: 0px 5%;
+                            text-align: center;
+
+                            .price {
+                                font-size: 20px;
+                                font-weight: 400;
+                            }
+                        }
+
+                        .item__logo {
+                            height: 80px;
+                            width: 10%;
+                            padding: 0px 5%;
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
+                            -webkit-box-align: center;
+                            -ms-flex-align: center;
+                            align-items: center;
+                            -webkit-box-pack: center;
+                            -ms-flex-pack: center;
+                            justify-content: center;
+                            position: absolute;
+                            right: 0px;
+                            -webkit-transform: scale(0);
+                            -ms-transform: scale(0);
+                            transform: scale(0);
+                            -webkit-transform-origin: right;
+                            -ms-transform-origin: right;
+                            transform-origin: right;
+                            color: #fff;
+                            background-color: #99e2d0;
+                            border-radius: 0px 15px 15px 0px;
+                            font-size: 18px;
+                            transform-origin: 100% 0;
+                            transition: transform 400ms ease-in-out;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .plat__container {
+
+            .item {
+                &:hover {
+                    .item__name {
+                        animation: width-reduce 500ms 0ms linear both;
+                    }
+
+                    .item__price {
+                        animation: translate-x 200ms 0ms linear both;
+
+                    }
+
+                    .item__logo {
+                        animation: scale-x 500ms 0ms linear both;
+                    }
+
+                    .fa-check-circle {
+                        animation: circle-rotate 400ms 0ms linear both;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.plat__01 {
+    animation: scale-y 800ms 3500ms linear both;
+    animation: scale-y 800ms 1000ms linear both;
+}
+
+.plat__02 {
+    animation: scale-y 800ms 1500ms linear both;
+}
+
+.plat__03 {
+    animation: scale-y 800ms 2000ms linear both;
+}
+
+.fas {
+    width: 1em;
+    font-size: 1.3em;
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+}
+
+.fa {
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+}
+
+.item {
+    height: 80px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 15px;
+
+    &:active {
+        .fas {
+            transform: translate(-2em, 0) rotate(180deg);
+            transform: translate(-2em, 0) rotate(180deg);
+        }
+    }
+
+    .item__name {
+        width: 70%;
+        padding: 0px 5%;
+
+        .plat-menu {
+            font-family: 'Roboto', sans-serif;
+            text-align: left;
+            font-size: 20px;
+            font-weight: 600;
+            color: #000;
+            margin: 0;
+        }
+
+        h5 {
+            margin: 0;
+            font-weight: 400;
+            font-size: 15px;
+            font-family: 'Roboto', sans-serif;
+        }
+    }
+
+    .item__price {
+        width: 10%;
+        padding: 0px 5%;
+        text-align: center;
+    }
+
+    .price {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+
+    .item__logo {
+        height: 80px;
+        width: 10%;
+        padding: 0px 5%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        position: absolute;
+        right: 0px;
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+        -webkit-transform-origin: right;
+        -ms-transform-origin: right;
+        transform-origin: right;
+        color: #fff;
+        background-color: #99e2d0;
+        border-radius: 0px 15px 15px 0px;
+        font-size: 18px;
+        transform-origin: 100% 0;
+        transition: transform 400ms ease-in-out;
+    }
+}
+
+.btn-restaurant {
+    background: linear-gradient(to top, #9356DC, #FF79DA);
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 18px;
+    color: white;
+    border: violet;
+    box-shadow: 0px 0px 12px 0px rgb(0 0 0 / 40%);
+    width: 25%;
+    margin: 2em 0 6em 37%;
+}
+
+/* Gere le mode Mobile */
+@media only screen and (max-width: 599px) {
+
+    /*Page d'acceuil*/
+    @keyframes loading {
+
+        /*gère le positionnement du loader et sa disparition à 100% */
+        0% {
+            transform: scale(1);
+            opacity: 1;
+            margin-top: 65%;
+            margin-left: 30%;
+        }
+
+        50% {
+            transform: scale(1);
+            opacity: 1;
+            margin-top: 65%;
+            margin-left: 30%;
+        }
+
+        80% {
+            transform: scale(1);
+            opacity: 1;
+            margin-top: 65%;
+            margin-left: 30%;
+        }
+
+        95% {
+            transform: scale(1);
+            opacity: 1;
+            margin-top: 65%;
+            margin-left: 30%;
+        }
+
+        100% {
+            transform: scale(0);
+            opacity: 0;
+            margin-top: 65%;
+            margin-left: 30%;
+        }
+    }
+
+    .background-loading {
+        width: 100%;
+        height: 3.8em;
+        background: #a7a6a6;
+        animation: background-loading 3000ms;
+        position: absolute;
+        z-index: 2;
+        opacity: 0;
+    }
+
+    .h1 {
+        padding: 0.3em 0em;
+    }
+
+    .logo-position {
+        margin-left: 1.5em;
+        font-size: 1em;
+    }
+
+    input {
+        border: 0;
+        font-weight: bold;
+        background-color: transparent;
+        font-size: 1em;
+        font-family: 'Roboto', sans-serif;
+        margin-left: 1em;
+    }
+
+    h2 {
+        margin: 10% 16% 5% 16%;
+        font-size: 1.4em;
+    }
+
+    .btn-acceuil {
+        background: linear-gradient(to top, #9356DC, #FF79DA);
+        margin: 10% 0;
+        padding-bottom: 1em;
+        border-radius: 30px;
+        color: white;
+        border: violet;
+        box-shadow: 0px 0px 12px 0px rgb(0 0 0 / 40%);
+        font-size: 1.1rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: lighter;
+        width: 80%;
+        max-width: 80%;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+        margin-right: auto;
+        margin-left: auto;
+        height: 3.5em;
+        margin-bottom: 3em;
+    }
+
+    h3 {
+        margin-top: 2em;
+
+        text-align: left;
+    }
+
+    .function_menu {
+        height: 25em;
+    }
+
+    .choose {
+        width: 100%;
+
+        &:hover {
+            background-color: rgb(245, 237, 255);
+        }
+    }
+
+    .first {
+        margin-top: 1.8em;
+        margin-left: -0.8em;
+    }
+
+    .text {
+        padding-top: 2em;
+        padding-bottom: 2em;
+        text-align: center;
+        font-weight: 600;
+    }
+
+
+
+
+    .logo-explication i {
+        padding-top: 1.5em;
+        margin-left: 0.8em;
+        width: 10%;
+
+        &:hover {
+            color: #9356DC;
+        }
+    }
+
+    #container-menu {
+        width: 100%;
+        flex-direction: column;
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+
+    .title-restaurant {
+        text-align: start;
+        margin-left: 1em;
+    }
+
+    .title-footer {
+        text-align: left;
+    }
+
+    .links-footer {
+        align-items: start;
+    }
+
+    .mention {
+        .fas {
+            display: none;
+        }
+    }
+
+    .contact {
+        .far {
+            display: none;
+        }
+    }
+
+    /*FIN PAGE D'ACCEUIL*/
+    /*PAGE RESTAURANT*/
+    header {
+        height: auto;
+    }
+
+    .explication {
+        flex-direction: column;
+    }
+
+    .bloc_resto {
+        width: 90%;
+    }
+
+    .previous {
+        left: 1em !important;
+        font-size: 1em !important;
+        position: absolute;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .restaurant_picture {
+        img {
+            height: 14em;
+            width: 100%;
+            object-fit: cover;
+            position: absolute;
+        }
+    }
+
+    .menu {
+        border-top-right-radius: 2.5em;
+        border-top-left-radius: 2.5em;
+    }
+
+    .title-menu {
+        white-space: nowrap;
+        text-transform: none;
+        font-weight: normal;
+    }
+
+    .logo-menu {
+        align-items: baseline;
+        width: 16%;
+        height: 90%;
+    }
+
+    .no-like-menu {
+        position: relative;
+    }
+
+    .like-menu {
+        position: absolute;
+        margin-top: 1em;
+        width: 5%;
+        height: 90%;
+    }
+
+    .plat-menu {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 13px;
+    }
+
+    .price {
+        margin-top: 2em;
+        font-size: 1em;
+        font-weight: 600;
+    }
+
+    h5 {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 13px;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+    .btn-restaurant {
+        display: flex;
+        width: 65%;
+        justify-content: center;
+        margin: 2em 0 7em 19%;
+        padding-left: 2em;
+        padding-right: 2em;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .underline {
+        width: 18.5%;
+        max-width: 13%;
+        margin: 0;
+    }
+
+    .item__name {
+        width: 70%;
+        padding: 4%
+    }
+}
+
+/*Mode Tablette */
+@media screen and (min-width: 600px) and (max-width:1279px) {
+
+    /*===== loading spinner ===*/
+    @keyframes loading {
+        0% {
+            transform: scale(1);
+            opacity: 0.9;
+            margin-top: 54%;
+            margin-left: 37%;
+        }
+
+        50% {
+            transform: scale(1);
+            opacity: 0.9;
+            margin-top: 54%;
+            margin-left: 37%;
+
+        }
+
+        80% {
+            transform: scale(1);
+            opacity: 0.9;
+            margin-top: 54%;
+            margin-left: 37%;
+        }
+
+        95% {
+            transform: scale(1);
+            opacity: 0.9;
+            margin-top: 54%;
+            margin-left: 37%;
+        }
+
+        100% {
+            transform: scale(0);
+            opacity: 0;
+            margin-top: 54%;
+            margin-left: 37%;
+        }
+    }
+
+    .background-loading {
+        width: 100%;
+        height: 2.8em;
+        background: #a7a6a6;
+        animation: background-loading 3000ms;
+        position: absolute;
+        z-index: 2;
+        opacity: 0;
+    }
+
+    /*======= fin loading spinner====*/
+    /*Page d'acceuil*/
+    header {
+        height: 70px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .location_box {
+        margin-left: 1.5%;
+    }
+
+    .logo-position {
+        margin-left: 1.5em;
+        font-size: 1.3em;
+    }
+
+    input {
+        border: 0;
+        font-weight: bold;
+        background-color: transparent;
+        font-family: 'Roboto', sans-serif;
+        margin-left: 1em;
+    }
+
+    h2 {
+        margin: 2.5% 20% 2.5% 16%;
+        font-size: 1.5em;
+    }
+
+    .description-container {
+        margin-left: 6em;
+        margin-right: 7em;
+    }
+
+    .btn-acceuil {
+        background: linear-gradient(to top, #9356DC, #FF79DA);
+        margin: 3.5% 0;
+        padding: 15px;
+        border-radius: 30px;
+        color: white;
+        border: violet;
+        box-shadow: 0px 0px 12px 0px rgb(0 0 0 / 40%);
+        font-size: 1.1rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: lighter;
+        width: 45%;
+        max-width: 80%;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    h3 {
+        margin-top: 1em;
+        text-align: center;
+    }
+
+    .explication {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .function_menu {
+        height: 25em;
+    }
+
+    .choose {
+        margin: 0em 0em 1.5em 0em;
+        border-radius: 1em;
+
+        &:hover {
+            background-color: rgb(245, 237, 255);
+        }
+    }
+
+    .first {
+        margin-top: 1.8em;
+    }
+
+    .text {
+        padding-top: 2em;
+        padding-bottom: 2em;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .logo-explication i {
+        padding-top: 1.5em;
+        margin-left: 0.8em;
+        width: 10%;
+
+        &:hover {
+            color: #9356DC;
+        }
+    }
+
+    #container-menu {
+        width: 100%;
+        padding-top: 3em;
+    }
+
+    .bloc_resto {
+        width: 40%;
+        margin: 0em 0em 1.5em 0em;
+    }
+
+    .title-restaurant {
+        text-align: center;
+    }
+}
