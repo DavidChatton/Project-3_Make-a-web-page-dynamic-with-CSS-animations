@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <title>La palette du goût - Oh My Food</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
     <header class="la-palette-du-gout_header">
         <div class="header_container">
             <a class="previous" href="index.html">
-                <i class="fas fa-arrow-left active" aria hidden="true"></i>
+                <i class="fas fa-arrow-left"></i>
             </a>
             <a class="logo" href="index.html">
                 <h1>Ohmyfood</h1>
@@ -29,7 +29,7 @@
     <!-- MAIN -->
     <main class="restaurant_main">
         <!-- restaurant photo -->
-        <div class="restaurant_photo">
+        <div class="restaurant_picture">
             <img src="Photos/Photo-haute-def/restaurant_01.jpg" alt="">
         </div>
         <!-- menu -->
@@ -54,7 +54,7 @@
             <div class="plat">
                 <!-- title -->
                 <div class="plat__title">
-                    <h4>ENTREES</h4>
+                    <h4>ENTRÉES</h4>
                     <div class="underline"></div>
                 </div>
                 <!-- container plat 01 -->
@@ -66,14 +66,15 @@
                             <h3 class="plat-menu">Fricassée d'escargot</h3>
                             <h5>Au piment d'espelette</h5>
                         </div>
-                        <!-- price -->
-                        <div class="item__price">
-                            <h3 class="price">25€</h3>
-                        </div>
+                        <!-- price -->                        
+                            <div class="item__price">
+                                <h3 class="price">25€</h3>
+                            </div>
                         <!-- logo -->
-                        <div class="item__logo">
-                            <i class="fas fa-check-circle" aria-hidden="true"></i>
-                        </div>
+                            <div class="item__logo">
+                                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                            </div>
+                        
                     </div>
                     <!-- item -->
                     <div class="item">
@@ -88,7 +89,7 @@
                         </div>
                         <!-- logo -->
                         <div class="item__logo">
-                            <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-check-circle"></i>
                         </div>
                     </div>
                     <!-- item -->
@@ -231,27 +232,26 @@
             <input class="btn-restaurant" type="button" value="Commander">
         </section>
     </main>
-    <footer class="pied_resto">
-        <div class="info_footer">
-            <div class="pied_de_page">
-                <h6 class="titre-site-footer">ohmyfood</h6>
-            </div>
-            <div class="info_footer_lien">
-                <div class="proposition">
-                    <a href=""><i class="fas fa-utensils"></i>Proposer un restaurant</a>
-                </div>
-                <div class="partenaire">
-                    <a href=""><i class="fas fa-hands-helping"></i>Devenir partenaire</a>
-                </div>
-                <div class="mentions">
-                    <a href=""><i class="fas fa-scroll"></i>Mentions légales</a>
-                </div>
-                <div class="contact">
-                    <a href=""><i class="far fa-envelope"></i>Contact</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+  <footer class="restaurant-footer">
+		<div>
+			<div>
+				<h6 class="title-footer">ohmyfood</h6>
+			</div>
+			<div class="links-footer">
+				<div class="suggestion">
+					<a href=""><i class="fas fa-utensils"></i>Proposer un restaurant</a>
+				</div>
+				<div class="partner">
+					<a href=""><i class="fas fa-hands-helping"></i>Devenir partenaire</a>
+				</div>
+				<div class="mention">
+					<a href=""><i class="fas fa-scroll"></i>Mentions légales</a>
+				</div>
+				<div class="contact">
+					<a href=""><i class="far fa-envelope"></i>Contact</a>
+				</div>
+			</div>
+		</div>
+	</footer>
 </body>
-
 </html>
