@@ -1,8 +1,6 @@
 /* animation chargement de la page */
 /*Variable qui me permet de gérer la durée de l'animation */
 $anim-dur: 3500ms;
-$num-circles: 5;
-$anim-delay:$anim-dur/$num-circles;
 
 /* Arrière plan de l'animation */
 .background-loading {
@@ -48,7 +46,6 @@ $anim-delay:$anim-dur/$num-circles;
         width: 9em;
         height: 9em;
         background: #9356DC;
-        opacity: 0.5;
         border-radius: 50%;
         position: absolute;
         animation: circle $anim-dur backwards;
@@ -70,7 +67,6 @@ $anim-delay:$anim-dur/$num-circles;
         height: 6.5em;
         border-radius: 50%;
         background: #99E2D0;
-        opacity: 0.5;
         margin-top: 20px;
         margin-left: 20px;
         position: absolute;
@@ -93,7 +89,6 @@ $anim-delay:$anim-dur/$num-circles;
         width: 4em;
         height: 4em;
         background: #FF79DA;
-        opacity: 0.5;
         border-radius: 50%;
         margin-top: 40px;
         margin-left: 40px;
@@ -140,35 +135,35 @@ $anim-delay:$anim-dur/$num-circles;
     0% {
         transform: scale(1);
         opacity: 1;
-        margin-top: 22%;
+        margin-top: 30%;
         margin-left: 46%;
     }
 
     50% {
         transform: scale(1);
         opacity: 1;
-        margin-top: 22%;
+        margin-top: 30%;
         margin-left: 46%;
     }
 
     80% {
         transform: scale(1);
         opacity: 1;
-        margin-top: 22%;
+        margin-top: 30%;
         margin-left: 46%;
     }
 
     95% {
         transform: scale(1);
         opacity: 1;
-        margin-top: 22%;
+        margin-top: 30%;
         margin-left: 46%;
     }
 
     100% {
         transform: scale(0);
         opacity: 0;
-        margin-top: 22%;
+        margin-top: 30%;
         margin-left: 46%;
     }
 }
@@ -298,16 +293,16 @@ header {
     height: 80px;
     width: 100%;
     background-color: #fff;
-    box-shadow: 0px 0px 12px 0px rgb(0 0 0 / 60%);
+    box-shadow: 0px 30px 12px 0px rgb(0 0 0 / 10%);
+}
 
-    H1 {
-        color: black;
-        font-size: 3.5em;
-        display: flex;
-        justify-content: center;
-        margin: 0;
-        font-family: 'Shrikhand', cursive;
-    }
+H1 {
+    color: black;
+    font-size: 3.5em;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-family: 'Shrikhand', cursive;
 }
 
 .location {
@@ -692,12 +687,6 @@ img {
 
 /* Fin de page d'acceuil */
 /*Page Restaurant*/
-body {
-    height: 100%;
-    width: 100%;
-    margin: 0%;
-}
-
 .la-palette-du-gout_header {
     height: 80px;
     width: 100%;
@@ -1323,7 +1312,7 @@ body {
 
     .restaurant_picture {
         img {
-            height: 14em;
+            height: 14em !important;
             width: 100%;
             object-fit: cover;
             position: absolute;
@@ -1349,11 +1338,12 @@ body {
 
     .no-like-menu {
         position: relative;
+        margin: 0 0 0 2em !important;
     }
 
     .like-menu {
         position: absolute;
-        margin-top: 1em;
+        margin: 2.2em 0 0 1.7em !important;
         width: 5%;
         height: 90%;
     }
@@ -1366,9 +1356,9 @@ body {
     }
 
     .price {
-        margin-top: 2em;
-        font-size: 1em;
-        font-weight: 600;
+        margin-top: 2.7em;
+        font-size: 1em !important;
+        font-weight: 600 !important;
     }
 
     h5 {

@@ -58,7 +58,6 @@
   width: 9em;
   height: 9em;
   background: #9356DC;
-  opacity: 0.5;
   border-radius: 50%;
   position: absolute;
   -webkit-animation: circle 3500ms backwards;
@@ -80,7 +79,6 @@
   height: 6.5em;
   border-radius: 50%;
   background: #99E2D0;
-  opacity: 0.5;
   margin-top: 20px;
   margin-left: 20px;
   position: absolute;
@@ -103,7 +101,6 @@
   width: 4em;
   height: 4em;
   background: #FF79DA;
-  opacity: 0.5;
   border-radius: 50%;
   margin-top: 40px;
   margin-left: 40px;
@@ -168,35 +165,35 @@
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 1;
-    margin-top: 22%;
+    margin-top: 30%;
     margin-left: 46%;
   }
   50% {
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 1;
-    margin-top: 22%;
+    margin-top: 30%;
     margin-left: 46%;
   }
   80% {
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 1;
-    margin-top: 22%;
+    margin-top: 30%;
     margin-left: 46%;
   }
   95% {
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 1;
-    margin-top: 22%;
+    margin-top: 30%;
     margin-left: 46%;
   }
   100% {
     -webkit-transform: scale(0);
             transform: scale(0);
     opacity: 0;
-    margin-top: 22%;
+    margin-top: 30%;
     margin-left: 46%;
   }
 }
@@ -206,35 +203,35 @@
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 1;
-    margin-top: 22%;
+    margin-top: 30%;
     margin-left: 46%;
   }
   50% {
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 1;
-    margin-top: 22%;
+    margin-top: 30%;
     margin-left: 46%;
   }
   80% {
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 1;
-    margin-top: 22%;
+    margin-top: 30%;
     margin-left: 46%;
   }
   95% {
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 1;
-    margin-top: 22%;
+    margin-top: 30%;
     margin-left: 46%;
   }
   100% {
     -webkit-transform: scale(0);
             transform: scale(0);
     opacity: 0;
-    margin-top: 22%;
+    margin-top: 30%;
     margin-left: 46%;
   }
 }
@@ -446,10 +443,11 @@ header {
   height: 80px;
   width: 100%;
   background-color: #fff;
-  -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.6);
-          box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0px 30px 12px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 30px 12px 0px rgba(0, 0, 0, 0.1);
 }
-header H1 {
+
+H1 {
   color: black;
   font-size: 3.5em;
   display: -webkit-box;
@@ -855,12 +853,6 @@ img {
 
 /* Fin de page d'acceuil */
 /*Page Restaurant*/
-body {
-  height: 100%;
-  width: 100%;
-  margin: 0%;
-}
-
 .la-palette-du-gout_header {
   height: 80px;
   width: 100%;
@@ -1530,7 +1522,7 @@ body {
   }
 
   .restaurant_picture img {
-    height: 14em;
+    height: 14em !important;
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
@@ -1558,11 +1550,12 @@ body {
 
   .no-like-menu {
     position: relative;
+    margin: 0 0 0 2em !important;
   }
 
   .like-menu {
     position: absolute;
-    margin-top: 1em;
+    margin: 2.2em 0 0 1.7em !important;
     width: 5%;
     height: 90%;
   }
@@ -1575,9 +1568,9 @@ body {
   }
 
   .price {
-    margin-top: 2em;
-    font-size: 1em;
-    font-weight: 600;
+    margin-top: 2.7em;
+    font-size: 1em !important;
+    font-weight: 600 !important;
   }
 
   h5 {
