@@ -993,12 +993,53 @@ img {
                     }
                 }
             }
+
+            .item {
+                &:not(:hover) {
+                    .item__name {
+                        animation: width-increase 500ms 0ms linear both;
+                    }
+
+                    .item__logo {
+                        animation: reduce-x 350ms 0ms linear both;
+                    }
+                }
+            }
         }
     }
 }
 
+@keyframes reduce-x {
+    0% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: scaleX(0);
+    }
+}
+
+@keyframes width-increase {
+    from {
+        width: 50%;
+    }
+
+    to {
+        width: 70%;
+    }
+}
+
+@keyframes fasrotate {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(2160deg)
+    }
+}
+
 .plat__01 {
-    animation: scale-y 800ms 3500ms linear both;
     animation: scale-y 800ms 1000ms linear both;
 }
 
@@ -1563,5 +1604,45 @@ img {
 
     .title-restaurant {
         text-align: center;
+    }
+}
+
+@media screen and (min-width: 2048px) and (max-width:4096px) {
+    .function_menu {
+        padding-left: 2em;
+        padding-right: 2em;
+        height: 10em;
+        margin: auto;
+        max-width: 1850px;
+    }
+
+    #container-menu {
+        max-width: 2500px;
+        margin: auto;
+        background: white;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+
+    .location .location_box {
+        height: 3.5em;
+        margin: auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-left: 2%;
     }
 }
