@@ -2,6 +2,9 @@
 Third project of the "Web Developer" course at OpenClassroom. The objective is to integrate and dynamize a web page with CSS animations using the Sass preprocessor
 You can find the [complete brief here](https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/DW_P3/Brief%20cre%CC%81atif%20-%20Ohmyfood!.pdf)
 
+### Project
+
+ [The Project in french](https://openclassrooms.com/fr/paths/185/projects/637/assignment)
 
 ## Objectives
 
