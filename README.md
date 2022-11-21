@@ -61,4 +61,4 @@ You can find the [complete brief here](https://s3-eu-west-1.amazonaws.com/course
 
 ## See the project
 
-To test simply & quickly, please visit the online demo : https://davidchatton.github.io/DavidChatton_3_20042021/
+To test simply & quickly, please visit the online demo : https://davidchatton.github.io/Project-3_Make-a-web-page-dynamic-with-CSS-animations/
